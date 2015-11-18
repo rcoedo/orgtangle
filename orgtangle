@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+":";TANGLE_OUTPUT=$1 exec emacs --no-site-file --script "$0" -- "$@" # -*-emacs-lisp-*-
+(require 'org)
+(org-babel-tangle-file (getenv "TANGLE_OUTPUT"))
